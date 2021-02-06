@@ -66,7 +66,7 @@ class Cryptocom {
 
     async get_ticker(symbol) {
         return new Promise((resolve, reject) => {
-            this.getRequest("public/get-ticker", { symbol: symbol }).then(response => {
+            this.getRequest("public/get-ticker", { instrument_name: symbol }).then(response => {
                 return resolve(response);
             }).catch(e => { return reject(e) })
         })
@@ -254,7 +254,7 @@ class Cryptocom {
     async cancel_order(symbol, order_id) {
         return new Promise((resolve, reject) => {
             this.postRequest("private/cancel-order", {
-                 symbol: symbol,
+                instrument_name: symbol,
                  order_id: order_id
                  }).then(response => {
                 return resolve(response);
@@ -265,7 +265,7 @@ class Cryptocom {
     async cancel_all_orders(symbol) {
         return new Promise((resolve, reject) => {
             this.postRequest("private/cancel-all-orders", {
-                 symbol: symbol
+                instrument_name: symbol
                  }).then(response => {
                 return resolve(response);
             }).catch(e => { return reject(e) })

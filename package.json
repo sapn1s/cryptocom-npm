@@ -1,6 +1,6 @@
 {
   "name": "cryptocom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Methods for crypto.com API",
   "main": "index.js",
   "scripts": {
@@ -10,13 +10,13 @@
     "crypto",
     "cryptocom",
     "crypto.com",
-    "API"
+    "API",
+    "cdc"
   ],
   "author": "Sap#7777",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "crypto-js": "^4.0.0",
-    "querystring": "^0.2.0"
+    "crypto-js": "^4.0.0"
   }
 }
